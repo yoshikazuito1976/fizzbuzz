@@ -33,14 +33,28 @@
 //     }
 // }
 
+// fn fizzbuzz(end: i32) {
+//     let r = 1..=end;
+
+//     for x in r {
+//         match x % 15 {
+//             0 => println!("FizzBuzz"),
+//             3 | 6 | 9 | 12 => println!("Fizz"),
+//             5 | 10 => println!("Buzz"),
+//             _ => println!("{}",x),
+//         }
+      
+//     }
+// }
+
 fn fizzbuzz(end: i32) {
     let r = 1..=end;
 
     for x in r {
-        match x % 15 {
-            0 => println!("FizzBuzz"),
-            3 | 6 | 9 | 12 => println!("Fizz"),
-            5 | 10 => println!("Buzz"),
+        match (x % 3,x%5) {
+            (0,0) => println!("FizzBuzz"),
+            (0,_) => println!("Fizz"),
+            (_,0) => println!("Buzz"),
             _ => println!("{}",x),
         }
       
@@ -48,5 +62,5 @@ fn fizzbuzz(end: i32) {
 }
 
 fn main() {
-    fizzbuzz(100);
+    fizzbuzz(30);
 }
