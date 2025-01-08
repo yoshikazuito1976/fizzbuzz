@@ -51,7 +51,7 @@ fn fizzbuzz(end: i32) {
     let r = 1..=end;
 
     for x in r {
-        match (x % 3,x%5) {
+        match (x % 3,x % 5) {
             (0,0) => println!("FizzBuzz"),
             (0,_) => println!("Fizz"),
             (_,0) => println!("Buzz"),
